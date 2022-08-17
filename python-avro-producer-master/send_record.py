@@ -31,7 +31,7 @@ def send_record(args):
     try:
         producer.produce(topic=args.topic, key=key, value=value)
     except Exception as e:
-        print(f"Exception while producing record value - {value} to topic - {args.topic}: {e}")
+        print(f"Exception while producing record value")
     else:
         print(f"Successfully producing record value - {value} to topic - {args.topic}")
 
